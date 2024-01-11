@@ -1,0 +1,18 @@
+.table{
+    background-image: "bg.jpg";
+    /* width: 200px; */
+    width: unset !important;
+    justify-self: center;
+}
+
+body{
+    background:wheat;
+}
+
+.navbar{
+    background-color: orange;
+}
+
+.btn{
+    width: 100%;
+}

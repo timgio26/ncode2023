@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- <h1>Petualangan Si Jeruk</h1> -->
+
+<div style="display: grid;">
+    <table class="table table-bordered">
+        {% for row in ['1','2','3','4','5']%}
+        <tr>
+            {% for col in ['A','B','C','D','E']%}
+            <td style="width: 60px;height: 60px;">
+                {% if kode %}
+                    {% if col+row in kode %}
+                        <img src="static/icon.png" alt="">
+                    {% else %}
+                    {% endif %}
+                {% endif %}
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<form method="POST" autocomplete="off">
+
+    <div class="container">
+    KODE
+    <!-- <br> -->
+    <input class="form-control" type="text" placeholder="" id="kode" name="kode" required>
+    </div>
+
+    <br>
+    <div class="container">
+    <input type="submit" name="action" value="Submit Kode" class="btn btn-primary mb-3">
+    </div>
+</form>
+
+{% endblock %}
+
+

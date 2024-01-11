@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- <h1>Petualangan Si Jeruk</h1> -->
+
+<form method="POST" autocomplete="off">
+    <div class="container">
+    Nama Lengkap
+    <!-- <br> -->
+    <input class="form-control" type="text" placeholder="" id="qnama" name="qnama" required>
+    </div>
+    <!-- <br> -->
+    <div class="container">
+    Username
+    <!-- <br> -->
+    <input class="form-control" type="text" placeholder="" id="quname" name="quname" required>
+    </div>
+
+    <div class="container">
+    Password
+
+    <input class="form-control" type="password" placeholder=""  id="qpass" name="qpass" required>
+    </div>
+
+    <br>
+    <div class="container">
+    <input type="submit" name="action" value="Daftar" class="btn btn-primary mb-3">
+    </div>
+</form>
+
+{% endblock %}
+
+

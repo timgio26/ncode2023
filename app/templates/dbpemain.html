@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- <h1>Petualangan Si Jeruk</h1> -->
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Nama</th>
+            <th>Password</th>
+            <th>Koordinat</th>
+            <th>Bingo Date</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in df %}
+        <tr>
+            <td>{{i.username}}</td>
+            <td>{{i.nama}}</td>
+            <td>{{i.password}}</td>
+            <td>{{i.kode}}</td>
+            <td>{{i.bingodate}}</td>
+            <td><a href="{{url_for('deldbpemain',id=i.id)}}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+
