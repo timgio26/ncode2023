@@ -51,8 +51,11 @@ def keluar():
 @app.route('/main', methods=['GET', 'POST'])
 def main():
     if session.get('uid',None):
+        msg=None
         dbkode=pd.read_excel("app/static/dbkode.xlsx",engine='openpyxl')
         user=userName.query.get(session.get('uid',None))
+        if user.bingodate:
+            msg="BINGO"
         if request.method == 'POST':
             # print(dbkode[dbkode['kode']==request.form['kode']]['koordinat'])
             koordinat=dbkode[dbkode['kode']==request.form['kode']]['koordinat']#[0]
@@ -67,7 +70,7 @@ def main():
                         for i in test:
                             hasil=[a for a in vou if i in a]
                             if len(hasil)==5:
-                                # print('bingo')
+                                
                                 # print(hasil)
                                 # print(user.bingodate is None)
                                 if user.bingodate is None:
@@ -87,7 +90,7 @@ def main():
             else:
                 return redirect(url_for('main'))
         else:
-            return render_template('main.html',kode=user.kode)
+            return render_template('main.html',kode=user.kode,msg=msg)
     else:
         return redirect(url_for('masuk'))
     

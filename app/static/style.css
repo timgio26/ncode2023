@@ -1,12 +1,20 @@
+html{
+    height: 100%;
+}
+
 .table{
-    background-image: "bg.jpg";
-    /* width: 200px; */
     width: unset !important;
     justify-self: center;
 }
 
 body{
-    background:wheat;
+    background-image: url('bg.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    overflow: scroll;
 }
 
 .navbar{

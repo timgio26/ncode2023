@@ -2,8 +2,21 @@
 {% block content %}
 
 <!-- <h1>Petualangan Si Jeruk</h1> -->
-<div style="display: grid;justify-content: center;">
-    <div style="width: 400px;">
+<div class="container" style="display: grid;justify-content: center;">
+    <div class="container">
+        <img src="static/sijeruk.png" alt="" style="width: 356px;">
+        <h1>Cara bermain</h1>
+        <ol>
+            <li>Jika belum terdaftar, silahkan klik 'Daftar' dan masukan nama, username dan password</li>
+            <li>Jika sudah terdaftar, silahkan klik 'Masuk' dan masukan username dan password yang kamu daftarkan</li>
+            <li>Cari kode rahasia di poster kemasan NutriSari yang tersebar di kantor Nutrifood Rawabali</li>
+            <li>Ketik kode yang ditemukan, lalu klik 'Submit Kode'</li>
+            <li>Setiap kode akan mendapatkan poin di koordinat tertentu, kumpulkan hingga 5 poin horizontal atau vertikal</li>
+            <li>Pemenang adalah 3 orang tercepat mendapatkan bingo</li>
+        </ol>
+        
+    </div>
+    <div style="width: 100%;">
         <a href="{{url_for('masuk')}}" role="button" class="btn btn-outline-primary" style="margin-bottom: 5px;">Masuk</a>
         <a href="{{url_for('daftar')}}" role="button" class="btn btn-primary">Daftar</a>
     </div>

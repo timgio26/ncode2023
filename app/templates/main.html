@@ -2,7 +2,11 @@
 {% block content %}
 
 <!-- <h1>Petualangan Si Jeruk</h1> -->
-
+{% if msg %}
+<div class="alert alert-success" role="alert">
+    {{msg}}
+</div>
+{% endif %}
 <div style="display: grid;">
     <table class="table table-bordered">
         {% for row in ['1','2','3','4','5']%}
