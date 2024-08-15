@@ -6,6 +6,6 @@ class userName(db.Model):
     nama = db.Column(db.String(20))
     username = db.Column(db.String(10))
     password = db.Column(db.String(10))
-    kode = db.Column(db.String(75))
+    kode = db.Column(db.String(200))
     bingodate=db.Column(db.String(75))
     # reqstat= db.Column(db.String(10))
